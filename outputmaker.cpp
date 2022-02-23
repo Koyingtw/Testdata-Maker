@@ -7,15 +7,16 @@ ifstream in;
 ofstream out;
 string indir = "./input/"; //input path
 string outdir = "./output/";//output path
-int fileId = 0
+int fileId = 0;
 
 void start() { // 建立檔案 
     while(1) {
         string filename;
         if (fileId < 10)
             filename += "0";
-        filename += to_string(i);
+        filename += to_string(fileId);
         in.open(outdir + filename + ".out");
+        fileId++;
         if (!in.is_open())
         {
             out.open(outdir + filename + ".out");
