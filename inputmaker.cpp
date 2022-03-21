@@ -5,7 +5,7 @@ using namespace std;
 
 ifstream ifs;
 ofstream file;
-string dir_name = "./input/";//path
+string dir_name = "../testdata";//path
 
 int fileId = 0;
 
@@ -16,7 +16,7 @@ void make_file() { // 建立檔案
         if (fileId < 10) 
             filename += "0";
         filename += to_string(fileId);
-        cerr << fileId << endl;
+        cerr << filename << endl;
         ifs.open(dir_name + filename + ".in");
         if (!ifs.is_open()) {
             file.open(dir_name + filename + ".in");

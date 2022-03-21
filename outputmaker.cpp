@@ -5,8 +5,8 @@ using namespace std;
 
 ifstream in;
 ofstream out;
-string indir = "./input/"; //input path
-string outdir = "./output/";//output path
+string indir = "../testdata/00_"; //input path
+string outdir = "../testdata/00_";//output path
 int fileId = 0;
 
 void start() { // 建立檔案 
@@ -17,6 +17,7 @@ void start() { // 建立檔案
         filename += to_string(fileId);
         in.open(outdir + filename + ".out");
         fileId++;
+        cerr << filename << endl;
         if (!in.is_open())
         {
             out.open(outdir + filename + ".out");
